@@ -57,32 +57,8 @@ class="downloadThroughHelper d1leftPanel f10 lucida dark-gray">
     北京工商银行<br>
     6222020200056063825 持卡人：武成龙  
 	
-<textarea name="text" id="text" cols="30" rows="10" readonly="readonly">fdsfasdfsdfa</textarea>
-<div class="button"><button onclick="myCopy()">点击复制</button></div>
-<script>
-
-function myCopy(){
-
-      var ele = document.getElementById("text");//ele是要复制的元素的对象
-
-      ele.focus();
-
-     // ele.select();
-     ele.setSelectionRange(0, ele.value.length);
-
-
-
-     if(document.execCommand('copy', false, null)){
-       //success info
-        alert("复制成功")
-      } else{
-        //fail info
-        alert("复制失败")
-      }
-
-}
-
-</script>
+<button class="copy" id="copyBtn" data-clipboard-action="copy" data-clipboard-target="#target" @click="copyPolicyNo">复制</button>
+<p id="target">要复制的内容</p>
 	
 </div> </DIV></DIV>
 <DIV style="WIDTH: 100% !important" class="antivirusBanner floatLeft">
