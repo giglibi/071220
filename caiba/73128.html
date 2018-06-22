@@ -56,12 +56,34 @@ class="downloadThroughHelper d1leftPanel f10 lucida dark-gray">
     6222600910027828928 持卡人：武成龙<br>
     北京工商银行<br>
     6222020200056063825 持卡人：武成龙  
-	<h2>从属性里复制</h2>
-<!--data-clipboard-text属性的值将会被复制-->
-<div id="btn" class="js-copy" data-clipboard-text="111-从属性复制">
-    <span>复制到剪切板-111</span>
-</div>
-<hr>
+	
+<textarea name="text" id="text" cols="30" rows="10" readonly="readonly">fdsfasdfsdfa</textarea>
+<div class="button"><button onclick="myCopy()">点击复制</button></div>
+<script>
+
+function myCopy(){
+
+      var ele = document.getElementById("text");//ele是要复制的元素的对象
+
+      ele.focus();
+
+     // ele.select();
+     ele.setSelectionRange(0, ele.value.length);
+
+
+
+     if(document.execCommand('copy', false, null)){
+       //success info
+        alert("复制成功")
+      } else{
+        //fail info
+        alert("复制失败")
+      }
+
+}
+
+</script>
+	
 </div> </DIV></DIV>
 <DIV style="WIDTH: 100% !important" class="antivirusBanner floatLeft">
 <DIV style="WIDTH: 100% !important" 
